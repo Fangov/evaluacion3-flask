@@ -15,7 +15,7 @@
 </form>
 {% if estado is defined %}
     <p>Promedio: {{ promedio | round(2) }}</p>
-    <p>Estado: <strong>{{ estado }}</strong></p>
+    <p>Estado: <strong class="{{estado | lower}}">{{ estado }}</strong></p>
 {% endif %}
 <a href="{{ url_for('inicio') }}">Volver al menú principal</a>
 {% endblock %}

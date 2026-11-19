@@ -32,3 +32,9 @@ main {
 h1 {
     text-align: center;
 }
+.aprobado{
+    color: #006400;
+}
+.reprobado{
+    color: #ff0000;
+}
