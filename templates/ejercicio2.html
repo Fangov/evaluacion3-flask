@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h1>Comparar Nombres</h1>
+<form method="post">
+    <label for="nombre1">Nombre 1</label>
+    <input type="text" id="nombre1" name="nombre1" required>
+
+    <label for="nombre2">Nombre 2</label>
+    <input type="text" id="nombre2" name="nombre2" required>
+
+    <label for="nombre3">Nombre 3</label>
+    <input type="text" id="nombre3" name="nombre3" required>
+
+    <button type="submit">Enviar</button>
+
+</form>
+{% if nombre is defined %}
+    <p>El nombre más largo es <strong>{{ nombre }}</strong>.</p>
+    <p>Tiene {{ cantidad }} letras.</p>
+{% endif %}
+{% if error %}
+    <p role="alert">{{ error }}</p>
+{% endif %}
+<a href="{{ url_for('inicio') }}">Volver al menú principal</a>
+{% endblock %}
